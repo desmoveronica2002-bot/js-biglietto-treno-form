@@ -4,9 +4,10 @@ function mostraPrezzo() {
 //let eta = prompt('eta');
 
 
-// X calcolare il prezzo
+// X calcolare il prezzo + tipo offerta
     const km = parseFloat(document.getElementById("km").value);
     const eta = parseInt(document.getElementById("eta").value);
+    const offerta = document.getElementById("offerta");
 
 
     let prezzo = km * 0.21;
@@ -16,6 +17,7 @@ function mostraPrezzo() {
 
         prezzo = prezzo - ( prezzo * 0.20 );
         console.log("Prezzo: €" + prezzo.toFixed(2));
+        offerta.innerText = 'biglietto minorenni'; // tipo offerta 
 
     }
 
@@ -23,12 +25,13 @@ function mostraPrezzo() {
 
         prezzo = prezzo - (prezzo * 0.40 );
         console.log("Prezzo: €" + prezzo.toFixed(2)); 
-
+        offerta.innerText = 'biglietto anziani'; // tipo offerta 
 
     }
     else {
 
         console.log("Prezzo: €" + prezzo.toFixed(2));
+        offerta.innerText = 'biglietto standard'; // tipo offerta 
 
     }
 
@@ -36,10 +39,11 @@ function mostraPrezzo() {
     document.getElementById("prezzo").innerText = "Prezzo: € " + prezzo.toFixed(2); // toFixed limita il numero dei decimali
 
 // X compilare in automatico il biglietto in nome e cognome
-    const nome_cognome = document.getElementById("nome_cognome")
-    const nomePasseggero = document.getElementById("nomePasseggero")
+    const nome_cognome = document.getElementById("nome_cognome");
+    const nomePasseggero = document.getElementById("nomePasseggero");
     nomePasseggero.innerText = nome_cognome.value;
 
+// X numero rndom carrozza
 
 
 
