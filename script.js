@@ -43,11 +43,15 @@ function mostraPrezzo() {
     const nomePasseggero = document.getElementById("nomePasseggero");
     nomePasseggero.innerText = nome_cognome.value;
 
-// X numero rndom carrozza
+// X numero random carrozza
+    const carrozza = document.getElementById("carrozza");
+    const numeroCarrozza = Math.floor(Math.random() * 9) + 1;
+    carrozza.innerText = numeroCarrozza;
 
-
-
-
+// X numero random CP
+    const codiceCp = document.getElementById("codiceCp");
+    const numeroCodiceCp = Math.floor(Math.random() * 10000) + 1;
+    codiceCp.innerText = numeroCodiceCp;
 
 }
 
