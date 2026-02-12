@@ -1,4 +1,10 @@
+const biglietto = document.getElementById("nascondi");
+biglietto.style.display = "none"; // nascondo il biglietto
+
+
 function mostraPrezzo() {
+
+    biglietto.style.display = "block"; //  mostro il biglietto
 
 //let km = prompt('km');
 //let eta = prompt('eta');
@@ -60,6 +66,8 @@ function cancellaTutto(){ //cancello i dati inseriti dall'utente
     document.getElementById("km").value = "";
     document.getElementById("eta").value = "";
     document.getElementById("prezzo").innerText = "";
+
+    biglietto.style.display = "none"; // nascondo il biglietto
 
 }
 
