@@ -1,5 +1,8 @@
  function mostraPrezzo() {
 
+//let km = prompt('km');
+//let eta = prompt('eta');
+
 const km = parseFloat(document.getElementById("km").value);
 const eta = parseInt(document.getElementById("eta").value);
 
@@ -27,6 +30,14 @@ else if ( eta > 65 ) {
  }
 
 
- document.getElementById("prezzo").innerText = "Prezzo: € " + prezzo.toFixed(2); // toFixed limita il numero dei decimali
+document.getElementById("prezzo").innerText = "Prezzo: € " + prezzo.toFixed(2); // toFixed limita il numero dei decimali
+
+}
+
+function cancellaTutto(){ //cancello i dati inseriti dall'utente
+    document.getElementById("nome_cognome").value = "";
+    document.getElementById("km").value = "";
+    document.getElementById("eta").value = "";
+    document.getElementById("prezzo").innerText = "";
 
 }
